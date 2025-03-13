@@ -12,7 +12,7 @@ class Solution {
                 map.put(rem,i);
             }
             else if(i- map.get(rem)  > 1){
-                System.out.println(i-map.get(rem));
+                //System.out.println(i-map.get(rem));
                 return true;
             }
 

@@ -1,7 +1,7 @@
 class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         
-        int[] ans = new int[nums2.length];
+        // int[] ans = new int[nums2.length];
 
         Stack<Integer> mono = new Stack<>();
         HashMap<Integer,Integer> index = new HashMap<>();
@@ -12,18 +12,18 @@ class Solution {
                     mono.pop();
                 }
                 if(!mono.isEmpty()){
-                    ans[i] = mono.peek();
+                    nums2[i] = mono.peek();
                 }
                 else{
-                    ans[i] = -1;
+                    nums2[i] = -1;
                 }
                 mono.push(n);
             
         }
-        for(int x : ans) System.out.print(x + " ");
+      //  for(int x : ans) System.out.print(x + " ");
 
         for(int i=0; i<nums1.length; i++){
-            nums1[i] = ans[index.get(nums1[i])];
+            nums1[i] = nums2[index.get(nums1[i])];
         }
         return nums1;
     }

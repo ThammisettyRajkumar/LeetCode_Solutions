@@ -5,7 +5,7 @@ class Solution:
         n = len(nums)
         nge = n*[0]
         for i in range(2*len(nums)-1, -1, -1):
-            print(i)
+            # print(i)
             while stack and stack[-1] <= nums[i%n]:
                 stack.remove(stack[-1])
             if i< n:

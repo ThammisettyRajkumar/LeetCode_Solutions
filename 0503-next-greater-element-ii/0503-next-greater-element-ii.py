@@ -9,10 +9,7 @@ class Solution:
             while stack and stack[-1] <= nums[i%n]:
                 stack.remove(stack[-1])
             if i< n:
-                if stack : 
-                    nge[i] = stack[-1]
-                else : 
-                    nge[i] = -1
+                nge[i] = stack[-1] if stack else -1
             stack.append(nums[i%n])
             # print(f"the stack at ",stack)
         return nge
